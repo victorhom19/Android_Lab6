@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         imageView = findViewById(R.id.image)
         executorService.execute {
-            val url = URL("https://static.wikia.nocookie.net/dota2_gamepedia/images/c/c0/Pudge_icon.png/revision/latest?cb=20160411211506")
+            val url = URL(url)
             val image = BitmapFactory.decodeStream(url.openConnection().getInputStream())
             runOnUiThread { imageView.setImageBitmap(image) }
         }
@@ -27,6 +27,9 @@ class MainActivity : AppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
         executorService.shutdown()
+    }
+    companion object {
+        private const val url = "https://static.wikia.nocookie.net/dota2_gamepedia/images/c/c0/Pudge_icon.png/revision/latest?cb=20160411211506"
     }
 
 }
