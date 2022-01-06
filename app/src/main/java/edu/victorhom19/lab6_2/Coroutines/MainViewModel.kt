@@ -2,8 +2,6 @@ package edu.victorhom19.lab6_2.Coroutines
 
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
-import android.widget.ImageView
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -15,7 +13,6 @@ import java.net.URL
 class MainViewModel : ViewModel() {
 
     val liveData = MutableLiveData<Bitmap>(null)
-
     fun downloadImage() {
         viewModelScope.launch(Dispatchers.IO) {
             val url = URL(url)

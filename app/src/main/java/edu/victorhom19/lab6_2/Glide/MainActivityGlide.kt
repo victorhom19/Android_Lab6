@@ -1,12 +1,9 @@
-package edu.victorhom19.lab6_2
+package edu.victorhom19.lab6_2.Glide
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
-import java.util.concurrent.ExecutorService
-import android.graphics.BitmapFactory
 import com.bumptech.glide.Glide
-import java.net.URL
-import java.util.concurrent.Executors
+import edu.victorhom19.lab6_2.R
 
 
 class MainActivityGlide: AppCompatActivity() {
